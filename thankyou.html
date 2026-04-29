@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | O&amp;E HomeBuyers</title>
+  <meta name="description" content="Thank you for contacting O&E HomeBuyers. We have received your inquiry and will be in touch shortly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1f3a5f; --navy-dark: #152b47;
+      --gold: #c8a94a; --white: #ffffff;
+      --gray-light: #f4f6f9; --gray-mid: #e2e7ef;
+      --gray-text: #5a6b80; --text-dark: #1a2535;
+      --green: #1e7a45;
+    }
+    body { font-family: 'Source Sans 3', sans-serif; color: var(--text-dark); background: var(--gray-light); line-height: 1.75; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: var(--navy); text-decoration: underline; }
+    a:hover { color: var(--gold); }
+
+    header { background: var(--navy-dark); padding: 0 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .logo { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
+    .logo-main { font-family: 'Merriweather', serif; font-weight: 900; font-size: 1.35rem; color: var(--white); }
+    .logo-sub { font-size: 0.72rem; color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; }
+    .header-phone { color: var(--gold); font-size: 1.1rem; font-weight: 600; text-decoration: none; }
+
+    main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 24px; }
+
+    .confirm-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-top: 5px solid var(--green);
+      border-radius: 3px;
+      padding: 52px 48px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 6px 28px rgba(31,58,95,0.09);
+    }
+
+    .check-circle {
+      width: 80px; height: 80px;
+      background: #e6f5ed;
+      border: 3px solid var(--green);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+      font-size: 2.2rem;
+    }
+
+    .confirm-card h1 {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 900;
+      color: var(--navy-dark);
+      margin-bottom: 14px;
+    }
+
+    .confirm-card p {
+      font-size: 1rem;
+      color: var(--gray-text);
+      margin-bottom: 14px;
+    }
+
+    .confirm-card p strong { color: var(--text-dark); }
+
+    .next-steps {
+      background: var(--gray-light);
+      border: 1px solid var(--gray-mid);
+      border-radius: 2px;
+      padding: 22px 26px;
+      margin: 28px 0;
+      text-align: left;
+    }
+    .next-steps h3 {
+      font-family: 'Merriweather', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .next-steps ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .next-steps ul li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.93rem; color: var(--gray-text);
+    }
+    .next-steps ul li::before {
+      content: "✓"; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 2px;
+    }
+
+    .sms-notice {
+      background: #f0f6ff;
+      border: 1px solid #c8d8ec;
+      border-radius: 2px;
+      padding: 14px 18px;
+      margin: 18px 0 28px;
+      font-size: 0.85rem;
+      color: #4a6080;
+      line-height: 1.55;
+    }
+    .sms-notice strong { color: var(--navy); }
+
+    .btn-home {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 36px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-home:hover { background: var(--navy-dark); color: var(--white); }
+
+    .or-call {
+      margin-top: 18px;
+      font-size: 0.9rem;
+      color: var(--gray-text);
+    }
+    .or-call a {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .or-call a:hover { text-decoration: underline; }
+
+    footer { background: var(--navy-dark); color: #8aafc8; padding: 28px 24px; }
+    .footer-inner { max-width: 1060px; margin: 0 auto; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.82rem; }
+    .footer-legal-links { display: flex; gap: 20px; }
+    .footer-legal-links a { font-size: 0.82rem; color: #8aafc8; }
+    .footer-legal-links a:hover { color: var(--gold); }
+
+    @media (max-width: 560px) {
+      .confirm-card { padding: 36px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-main">O&amp;E HomeBuyers</span>
+      <span class="logo-sub">O&amp;E Enterprises</span>
+    </a>
+    <a href="tel:9165551234" class="header-phone">(916) 555-1234</a>
+  </div>
+</header>
+
+<main>
+  <div class="confirm-card">
+
+    <div class="check-circle">✓</div>
+
+    <h1>We Received Your Request!</h1>
+    <p>Thank you for reaching out to <strong>O&amp;E HomeBuyers</strong>. Your inquiry has been submitted and a member of our team will review it shortly.</p>
+
+    <div class="next-steps">
+      <h3>What Happens Next</h3>
+      <ul>
+        <li>A member of our team will review your property information</li>
+        <li>We will contact you within 24 hours with next steps</li>
+        <li>We will present a fair, no-obligation cash offer</li>
+        <li>If you accept, we work around your closing timeline</li>
+      </ul>
+    </div>
+
+    <div class="sms-notice">
+      <strong>A note about communications:</strong> If you checked the SMS consent box on the form, you may receive a text message from us as a follow-up to your inquiry. These messages are related to your property only and will come from O&amp;E HomeBuyers. You can reply <strong>STOP</strong> at any time to opt out. Msg &amp; data rates may apply.
+    </div>
+
+    <p style="font-size:0.9rem; margin-bottom:24px;">In the meantime, feel free to call us directly if you have questions or would like to speak with someone right away.</p>
+
+    <a href="index.html" class="btn-home">← Return to Home</a>
+    <p class="or-call">Or call us now: <a href="tel:9165551234">(916) 555-1234</a></p>
+
+    <p style="margin-top:28px; font-size:0.78rem; color:#9aabbc;">
+      By submitting your information, you agreed to our
+      <a href="terms.html" style="font-size:0.78rem;">Terms of Service</a> and
+      <a href="privacy.html" style="font-size:0.78rem;">Privacy Policy</a>.
+    </p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom">
+      <p>© 2024 O&amp;E Enterprises DBA O&amp;E HomeBuyers. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
